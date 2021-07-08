@@ -22,6 +22,7 @@ export function ModalContextProvider({children}){
     }
   }
 
+
   return (
     <modalContext.Provider value={{
       modalIsOpen,
