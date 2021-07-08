@@ -24,7 +24,7 @@ function Trails() {
 
     return (
         <Wrapper>
-            {trails && trails.map((trail, index) => <TrailsCard trail={trail} key={index}/>)}
+            {trails && trails.map(trail => <TrailsCard trail={trail} key={trail.id}/>)}
             
         </Wrapper>
     )

@@ -64,6 +64,11 @@ export const Card = styled.article`
         font-weight: 600;
         font-size: 24px;
         line-height: 29px;
+
+        &:hover {
+            cursor: pointer;
+            opacity: .7;
+        }
     }
 
 `

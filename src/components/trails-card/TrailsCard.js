@@ -1,9 +1,11 @@
 import React from 'react'
+import { useModal } from '../../contexts/modalContext'
 
 import {Card} from './styles'
 
 function TrailsCard({trail}) {
     
+    const {openModal} = useModal()
 
     return (
         
@@ -11,7 +13,7 @@ function TrailsCard({trail}) {
             <img src={trail.image} aria-labelledby="trail-name" />
             <h2 id="trail-name">{trail.name}</h2>
             <p>{trail.description}</p>
-            <button>detalhes</button>
+            <button onClick={() => openModal(trail.name, trail.description, trail.id)}>detalhes</button>
         </Card>
     )
 }
