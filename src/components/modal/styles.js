@@ -6,6 +6,8 @@ export const Wrapper = styled.div`
   width: 1240px;
   min-height: 615px;
 
+  overflow: auto;
+
   position: fixed;
   top: 50%;
   left: 50%;
@@ -32,6 +34,7 @@ export const Wrapper = styled.div`
 
     width: 179px;
     height: 60px;
+    display: block;
 
     margin: 30px 0 20px auto;
 

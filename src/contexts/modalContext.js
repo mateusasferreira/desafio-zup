@@ -22,11 +22,14 @@ export function ModalContextProvider({children}){
     }
   }
 
+  const closeModal = () => setModalIsOpen(false)
+
 
   return (
     <modalContext.Provider value={{
       modalIsOpen,
       openModal,
+      closeModal,
       modalTrail
     }}>
       {children}        
