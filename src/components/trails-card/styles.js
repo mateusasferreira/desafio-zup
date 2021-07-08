@@ -69,6 +69,11 @@ export const Card = styled.article`
             cursor: pointer;
             opacity: .7;
         }
+
+        &:disabled {
+            opacity: .7;
+            background: rgba(26, 72, 110, 0.13);
+        }
     }
 
 `

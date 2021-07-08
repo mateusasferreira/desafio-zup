@@ -7,6 +7,7 @@ import Trails from "./components/trails/Trails";
 import Modal from "./components/modal/Modal";
 
 import { ModalContextProvider } from "./contexts/modalContext";
+import { SubsContextProvider } from "./contexts/subscriptionsContext";
 
 export const Container = styled.div`
   background: #0c3455;
@@ -25,13 +26,15 @@ function App() {
       }}
     >
       <ModalContextProvider>
-        <Container>
-            <GlobalStyle />
-            <AppHeader />
-            <Hero />
-            <Trails />
-            <Modal />
-        </Container>
+        <SubsContextProvider>
+          <Container>
+              <GlobalStyle />
+              <AppHeader />
+              <Hero />
+              <Trails />
+              <Modal />
+          </Container>
+        </SubsContextProvider>
       </ModalContextProvider>
     </ThemeProvider>
   );

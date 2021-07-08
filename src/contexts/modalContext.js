@@ -15,7 +15,6 @@ export function ModalContextProvider({children}){
       const res = await fetch(`https://60e2ee6f9103bd0017b47673.mockapi.io/api/v1/trails/${trailId}/trails-grade/${trailId}/courses/`)
       const trailCourses = await res.json()
       setModalTrail({name: trailName, description: trailDescription, id: trailId, courses: trailCourses})
-      console.log(modalTrail)
 
     } catch(err) {
       console.error(err)

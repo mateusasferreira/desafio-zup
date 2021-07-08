@@ -5,6 +5,7 @@ export const Wrapper = styled.div`
 
   width: 1240px;
   min-height: 615px;
+  max-height: 100vh;
 
   overflow: auto;
 
