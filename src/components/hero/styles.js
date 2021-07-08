@@ -5,6 +5,7 @@ export const Wrapper = styled.section`
 
     display: flex;
 
+    margin: 0 auto;
 
 `
 
