@@ -13,7 +13,13 @@ function Modal() {
         <Wrapper>
             <h1>{modalTrail.name}</h1>
             <p>{modalTrail.description}</p>
-            {modalTrail.courses.map(course => <p>{course.name}</p>)}
+            <button>inscrever-se</button>
+            <ul>
+                {modalTrail.courses.map(course => <li key={course.id}>
+                    <span>{course.name}</span>
+                    <span>{course.hours} horas</span>
+                </li>)}
+            </ul>
         </Wrapper>
     )
 }
