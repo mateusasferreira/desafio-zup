@@ -19,7 +19,7 @@ function Trails() {
 
 
     return (
-        <Wrapper>
+        <Wrapper data-testid="trails-wrapper">
             {trails && trails.map(trail => <TrailsCard trail={trail} key={trail.id}/>)}
             
         </Wrapper>
