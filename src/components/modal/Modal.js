@@ -10,8 +10,8 @@ function Modal() {
 
     const {subscribeToTrail} = useSubscription()
 
-    const closeWithEsc = (e)=>{
-        if(e.key === 'Escape' && modalIsOpen) {closeModal()}
+        const closeWithEsc = (e)=>{
+        if(e.key === 'Escape' && modalIsOpen) closeModal()
     }
     
     useEffect(()=> {
@@ -32,7 +32,10 @@ function Modal() {
             >
                 <h1 id="modal-title" >{modalTrail.name}</h1>
                 <p>{modalTrail.description}</p>
-                <button tabIndex="1" onClick={()=> {
+                <button 
+                title="confirmar inscrição na trilha ou apertar esc para continuar vendo trilhas" 
+                tabIndex="0" 
+                onClick={()=> {
                     closeModal()
                     subscribeToTrail(modalTrail.name)
                 }}>inscrever-se</button>

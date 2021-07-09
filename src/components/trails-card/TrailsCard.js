@@ -16,11 +16,14 @@ function TrailsCard({trail}) {
             <img src={trail.image} aria-labelledby="trail-name" />
             <h2 id="trail-name">{trail.name}</h2>
             <p>{trail.description}</p>
-            <button 
+            <button     
+                title={`ver detalhes da trilha ${trail.name}`}
+                id="card-btn"
                 onClick={() => openModal(trail.name, trail.description, trail.id)} 
                 disabled={subscriptions.includes(trail.name)} 
-                //verifica se o modal está aberto e habilita ou desabilita o foco nele
-                tabIndex={modalIsOpen ? "-1" : "0"} >detalhes</button>
+                tabIndex={modalIsOpen ? "-1" : "0"} >
+                    detalhes
+            </button>
         </Card>
     )
 }

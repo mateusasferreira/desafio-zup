@@ -12,7 +12,6 @@ export function SubsContextProvider({children}){
         if (subscriptions.includes(trail)) return
 
         setSubscriptions([...subscriptions, trail])
-
     }
 
     return (

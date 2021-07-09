@@ -19,6 +19,10 @@ export const Wrapper = styled.header`
     img {
         width: 48px;
         height: 48px;
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 
 `
