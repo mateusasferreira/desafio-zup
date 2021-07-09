@@ -6,7 +6,7 @@ import {Card} from './styles'
 
 function TrailsCard({trail}) {
     
-    const {openModal} = useModal()
+    const {openModal, modalIsOpen} = useModal()
 
     const {subscriptions} = useSubscription()
 
@@ -16,7 +16,11 @@ function TrailsCard({trail}) {
             <img src={trail.image} aria-labelledby="trail-name" />
             <h2 id="trail-name">{trail.name}</h2>
             <p>{trail.description}</p>
-            <button data-testid="card-btn" onClick={() => openModal(trail.name, trail.description, trail.id)} disabled={subscriptions.includes(trail.name)}>detalhes</button>
+            <button 
+                onClick={() => openModal(trail.name, trail.description, trail.id)} 
+                disabled={subscriptions.includes(trail.name)} 
+                //verifica se o modal está aberto e habilita ou desabilita o foco nele
+                tabIndex={modalIsOpen ? "-1" : "0"} >detalhes</button>
         </Card>
     )
 }

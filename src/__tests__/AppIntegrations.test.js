@@ -6,10 +6,13 @@ import api from "../api";
 
 import App from '../App'
 
+
+
 jest.mock("../api");
 
 describe("get trails data through api call", () => {
   it("should render trails in app", async () => {
+    //faz o mock da requisição para api  
     api.getTrails.mockResolvedValue([
       {
         "createdAt": "2021-07-05T04:19:32.524Z",
@@ -48,8 +51,13 @@ describe("get trails data through api call", () => {
 
     render(<App />);
 
+    //depois de renderizado o app, verifica se algum conteúdo da resposta da api foi renderizado
     expect(await screen.findByText("Trilha AWS")).toBeInTheDocument();
 
+    //verifica se foram criados cards para todos os itens da resposta da api
     expect(screen.getByTestId("trails-wrapper").children.length).toBe(3);
+
+    // verifica se o modal está fechado
+    expect(screen.queryByTestId('modal')).toBeNull
   });
 });

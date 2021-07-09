@@ -2,7 +2,7 @@ import { createContext, useContext, useState } from "react";
 
 import api from "../api";
 
-const modalContext = createContext({})
+export const modalContext = createContext({})
 
 
 export function ModalContextProvider({children}){

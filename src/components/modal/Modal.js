@@ -28,11 +28,11 @@ function Modal() {
                 role="dialog"
                 aria-modal={modalIsOpen}
                 aria-labelledby="modal-title"
-            
+                data-testid="modal"            
             >
-                <h1 id="modal-title">{modalTrail.name}</h1>
+                <h1 id="modal-title" >{modalTrail.name}</h1>
                 <p>{modalTrail.description}</p>
-                <button onClick={()=> {
+                <button tabIndex="1" onClick={()=> {
                     closeModal()
                     subscribeToTrail(modalTrail.name)
                 }}>inscrever-se</button>
