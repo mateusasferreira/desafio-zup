@@ -8,7 +8,7 @@ function AppHeader() {
     const {subscriptions} =  useSubscription()
 
     return (
-        <Wrapper>
+        <Wrapper data-testid="header">
             <span>inscrições: {subscriptions.length} </span>
             <img src={"/images/user-icon.png"} alt="" />
         </Wrapper>

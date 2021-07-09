@@ -4,20 +4,16 @@ import {Wrapper} from './styles'
 
 import TrailsCard from '../trails-card/TrailsCard'
 
+import api from '../../api/index'
+
 function Trails() {
     const [trails, setTrails] = useState(null)
     
-    useEffect(()=>{
-        async function getTrails(){
-            try {
-                const res = await fetch(`https://60e2ee6f9103bd0017b47673.mockapi.io/api/v1/trails/`)
-                const data = await res.json()
+    async function getTrails(){
+       setTrails( await api.getTrails())
+    }
 
-                setTrails(data)
-            } catch(err) {
-                console.error(err)
-            }
-        }
+    useEffect(()=>{
         getTrails()        
     }, [])
 

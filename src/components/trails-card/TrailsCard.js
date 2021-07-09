@@ -16,7 +16,7 @@ function TrailsCard({trail}) {
             <img src={trail.image} aria-labelledby="trail-name" />
             <h2 id="trail-name">{trail.name}</h2>
             <p>{trail.description}</p>
-            <button onClick={() => openModal(trail.name, trail.description, trail.id)} disabled={subscriptions.includes(trail.name)}>detalhes</button>
+            <button data-testid="card-btn" onClick={() => openModal(trail.name, trail.description, trail.id)} disabled={subscriptions.includes(trail.name)}>detalhes</button>
         </Card>
     )
 }

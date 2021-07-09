@@ -1,5 +1,6 @@
 import { createContext, useContext, useState } from "react";
 
+import api from "../api";
 
 const modalContext = createContext({})
 
@@ -11,14 +12,8 @@ export function ModalContextProvider({children}){
   const openModal = async (trailName, trailDescription, trailId) => {
     setModalIsOpen(true)
 
-    try {
-      const res = await fetch(`https://60e2ee6f9103bd0017b47673.mockapi.io/api/v1/trails/${trailId}/trails-grade/${trailId}/courses/`)
-      const trailCourses = await res.json()
-      setModalTrail({name: trailName, description: trailDescription, id: trailId, courses: trailCourses})
-
-    } catch(err) {
-      console.error(err)
-    }
+    const trailCourses = await api.getTrailCourses(trailId)
+    setModalTrail({name: trailName, description: trailDescription, id: trailId, courses: trailCourses})
   }
 
   const closeModal = () => setModalIsOpen(false)
