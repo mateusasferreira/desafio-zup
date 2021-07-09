@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.js": "/desafio-zup/static/js/main.d2bccd19.chunk.js",
-    "main.js.map": "/desafio-zup/static/js/main.d2bccd19.chunk.js.map",
+    "main.js": "/desafio-zup/static/js/main.309e4466.chunk.js",
+    "main.js.map": "/desafio-zup/static/js/main.309e4466.chunk.js.map",
     "runtime-main.js": "/desafio-zup/static/js/runtime-main.b0906788.js",
     "runtime-main.js.map": "/desafio-zup/static/js/runtime-main.b0906788.js.map",
     "static/js/2.b9258ed9.chunk.js": "/desafio-zup/static/js/2.b9258ed9.chunk.js",
     "static/js/2.b9258ed9.chunk.js.map": "/desafio-zup/static/js/2.b9258ed9.chunk.js.map",
     "index.html": "/desafio-zup/index.html",
-    "static/js/2.b9258ed9.chunk.js.LICENSE.txt": "/desafio-zup/static/js/2.b9258ed9.chunk.js.LICENSE.txt"
+    "static/js/2.b9258ed9.chunk.js.LICENSE.txt": "/desafio-zup/static/js/2.b9258ed9.chunk.js.LICENSE.txt",
+    "static/media/heroImage.8d17f348.png": "/desafio-zup/static/media/heroImage.8d17f348.png"
   },
   "entrypoints": [
     "static/js/runtime-main.b0906788.js",
     "static/js/2.b9258ed9.chunk.js",
-    "static/js/main.d2bccd19.chunk.js"
+    "static/js/main.309e4466.chunk.js"
   ]
 }
