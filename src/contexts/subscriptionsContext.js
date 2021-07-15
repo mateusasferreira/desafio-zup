@@ -8,10 +8,10 @@ const subsContext = createContext({})
 export function SubsContextProvider({children}){
     const [subscriptions, setSubscriptions] = useState([])
 
-    const subscribeToTrail = (trail) => {
-        if (subscriptions.includes(trail)) return
+    const subscribeToTrail = (trailId) => {
+        if (subscriptions.includes(trailId)) return
 
-        setSubscriptions([...subscriptions, trail])
+        setSubscriptions([...subscriptions, trailId])
     }
 
     return (

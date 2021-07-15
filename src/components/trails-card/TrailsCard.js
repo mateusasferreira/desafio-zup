@@ -20,8 +20,8 @@ function TrailsCard({trail}) {
                 title={`ver detalhes da trilha ${trail.name}`}
                 id="card-btn"
                 onClick={() => openModal(trail.name, trail.description, trail.id)} 
-                disabled={subscriptions.includes(trail.name)} 
-                tabIndex={modalIsOpen ? "-1" : "0"} >
+                tabIndex={modalIsOpen ? "-1" : 0}
+            >
                     detalhes
             </button>
         </Card>

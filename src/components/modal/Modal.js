@@ -8,7 +8,7 @@ function Modal() {
 
     const {modalIsOpen, modalTrail, closeModal} = useModal()
 
-    const {subscribeToTrail} = useSubscription()
+    const {subscriptions, subscribeToTrail} = useSubscription()
 
         const closeWithEsc = (e)=>{
         if(e.key === 'Escape' && modalIsOpen) closeModal()
@@ -37,8 +37,11 @@ function Modal() {
                 tabIndex="0" 
                 onClick={()=> {
                     closeModal()
-                    subscribeToTrail(modalTrail.name)
-                }}>inscrever-se</button>
+                    subscribeToTrail(modalTrail.id)
+                }}
+                disabled={subscriptions.includes(modalTrail.id)} 
+                >
+                    inscrever-se</button>
                 <ul>
                     {modalTrail.courses.map(course => <li key={course.id}>
                         <span>{course.name}</span>

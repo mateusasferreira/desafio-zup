@@ -70,10 +70,7 @@ export const Card = styled.article`
             opacity: .7;
         }
 
-        &:disabled {
-            opacity: .7;
-            background: rgba(26, 72, 110, 0.13);
-        }
+        
     }
 
 `

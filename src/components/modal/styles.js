@@ -54,6 +54,11 @@ export const Wrapper = styled.div`
       cursor: pointer;
       opacity: 0.7;
     }
+
+    &:disabled {
+            opacity: .7;
+            background: rgba(26, 72, 110, 0.13);
+    }
   }
 
   ul {

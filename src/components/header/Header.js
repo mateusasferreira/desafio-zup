@@ -14,7 +14,7 @@ function AppHeader() {
     return (
         <Wrapper data-testid="header">
             <span>inscrições: {subscriptions.length} </span>
-            <a tabIndex={modalIsOpen ? '-1' : '0'} title="opções do usuário"><img src={userIcon} alt="opções do usuário"/></a>
+            <a title="opções do usuário" tabIndex={modalIsOpen ? "-1" : "0"}><img src={userIcon} alt="opções do usuário"/></a>
         </Wrapper>
     )
 }

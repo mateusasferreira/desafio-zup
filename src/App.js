@@ -6,7 +6,7 @@ import Hero from "./components/hero/Hero";
 import Trails from "./components/trails/Trails";
 import Modal from "./components/modal/Modal";
 
-import { ModalContextProvider } from "./contexts/modalContext";
+import { ModalContextProvider, useModal } from "./contexts/modalContext";
 import { SubsContextProvider } from "./contexts/subscriptionsContext";
 
 export const Container = styled.div`
@@ -16,6 +16,9 @@ export const Container = styled.div`
 `;
 
 function App() {
+
+  const {modalIsOpen} = useModal()
+
   return (
     <ThemeProvider
       theme={{
@@ -27,13 +30,13 @@ function App() {
     >
       <ModalContextProvider>
         <SubsContextProvider>
-          <Container>
+          <Container aria-hidden={modalIsOpen}>
               <GlobalStyle />
               <AppHeader />
               <Hero />
               <Trails />
-              <Modal />
           </Container>
+          <Modal />
         </SubsContextProvider>
       </ModalContextProvider>
     </ThemeProvider>
